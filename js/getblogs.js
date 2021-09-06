@@ -1,5 +1,6 @@
 const baseUrl = "http://project-exam-1-prebeneide.preben.one/wp-json/wp/v2/posts";
 const wordpressContainer = document.querySelector(".wordpress");
+const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + baseUrl;
 
 
 async function getFirstPosts(url) {
@@ -16,7 +17,7 @@ async function getFirstPosts(url) {
     }
 }
 
-getFirstPosts(baseUrl);
+getFirstPosts(corsEnabledUrl);
 
 
 
