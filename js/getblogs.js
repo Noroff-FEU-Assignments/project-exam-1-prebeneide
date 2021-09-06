@@ -1,0 +1,134 @@
+const baseUrl = "http://project-exam-1-prebeneide.preben.one/wp-json/wp/v2/posts";
+const wordpressContainer = document.querySelector(".wordpress");
+
+
+async function getFirstPosts(url) {
+    const response = await fetch(url);
+    const post = await response.json();
+    for (let i = 0; i <= 3; i++) {
+        wordpressContainer.innerHTML +=
+        `<a href="blogpostspecificpages.html?id=${post[i].id}"
+        <div class="wordpresspostsdiv">
+        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
+        </div>
+        </a>`
+    }
+}
+
+getFirstPosts(baseUrl);
+
+
+
+async function getNextPosts(url) {
+    const response = await fetch(url);
+    const post = await response.json();
+    wordpressContainer.innerHTML = ""
+    for (let i = 4; i <= 7; i++) {
+        wordpressContainer.innerHTML +=
+        `<a href="blogpostspecificpages.html?id=${post[i].id}"
+        <div class="wordpresspostsdiv">
+        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
+        </div>
+        </a>`
+    }
+}
+
+async function getMorePosts(url) {
+    const response = await fetch(url);
+    const post = await response.json();
+    wordpressContainer.innerHTML = ""
+    for (let i = 8; i <= 11; i++) {
+        wordpressContainer.innerHTML +=
+        `<a href="blogpostspecificpages.html?id=${post[i].id}"
+        <div class="wordpresspostsdiv">
+        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
+        </div>
+        </a>`
+    }
+}
+
+
+
+async function firstPreviousButton(url) {
+    const response = await fetch(url);
+    const post = await response.json();
+    wordpressContainer.innerHTML = ""
+    for (let i = 0 ; i <= 3; i++) {
+        wordpressContainer.innerHTML +=
+        `<a href="blogpostspecificpages.html?id=${post[i].id}"
+        <div class="wordpresspostsdiv">
+        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
+        </div>
+        </a>`
+    }
+}
+
+async function secondPreviousButton(url) {
+    const response = await fetch(url);
+    const post = await response.json();
+    wordpressContainer.innerHTML = ""
+    for (let i = 4 ; i <= 7; i++) {
+        wordpressContainer.innerHTML +=
+        `<a href="blogpostspecificpages.html?id=${post[i].id}"
+        <div class="wordpresspostsdiv">
+        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
+        </div>
+        </a>`
+    }
+}
+
+document.querySelector(".nextbutton").addEventListener("click", function(){
+    document.querySelector(".morebutton").style.display = "block";
+    document.querySelector(".nextbutton").style.display = "none";
+    document.querySelector(".firstpreviousbutton").style.display = "block";
+
+})
+
+document.querySelector(".firstpreviousbutton").addEventListener("click", function(){
+    document.querySelector(".morebutton").style.display = "none";
+    document.querySelector(".nextbutton").style.display = "block";
+    document.querySelector(".firstpreviousbutton").style.display = "none";
+
+})
+
+document.querySelector(".morebutton").addEventListener("click", function(){
+    document.querySelector(".morebutton").style.display = "none";
+    document.querySelector(".firstpreviousbutton").style.display = "none";
+    document.querySelector(".secondpreviousbutton").style.display = "block";
+
+
+})
+
+document.querySelector(".secondpreviousbutton").addEventListener("click", function(){
+    document.querySelector(".morebutton").style.display = "block";
+    document.querySelector(".firstpreviousbutton").style.display = "block";
+    document.querySelector(".secondpreviousbutton").style.display = "none";
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

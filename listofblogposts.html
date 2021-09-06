@@ -11,21 +11,61 @@
 </head>
 <body>
     <header>
-        <nav class="navelement">
-            <ul>
+        <nav>
+            <div class="name">
+                <h5>Allergic? </h5>
+            </div>
+            <ul class="navlist">
                 <li><a href="index.html" >Home</a></li>
-                <li><a href="listofblogposts.html" class="active">List of blogposts</a></li>
-                <li><a href="blogpostspecificpages.html" >Blog post specific pages</a></li>
+                <li><a href="listofblogposts.html" class="active">Blogposts</a></li>
+                <li><a href="blogpostspecificpages.html" >Specific</a></li>
                 <li><a href="about.html" >About</a></li>
                 <li><a href="contact.html" >Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>List of blogs</h1>
+        <h1>Blogposts</h1>
+        <div class="filtercategories">
+            <div class="categories">
+              <label for="peanøtter">Peanøtter</label>
+              <input type="radio" id="peanøtter" class="category" name="category" value="21" />
+              <label for="kikerter">Kikerter</label>
+              <input type="radio" id="kikerter" class="category" name="category" value="12" />
+              <label for="linser">Linser</label>
+              <input type="radio" id="linser" class="category" name="category" value="11" />
+              <label for="bønner">Bønner</label>
+              <input type="radio" id="bønner" class="category" name="category" value="7" />
+              <label for="egg">Egg</label>
+              <input type="radio" id="egg" class="category" name="category" value="23" />
+              <label for="druer">Druer</label>
+              <input type="radio" id="druer" class="category" name="category" value="15" />
+              <label for="blåbær">Blåbær</label>
+              <input type="radio" id="blåbær" class="category" name="category" value="16" />
+              <label for="ketchup">Ketchup</label>
+              <input type="radio" id="ketchup" class="category" name="category" value="88" />
+              <label for="kiwi">Kiwi</label>
+              <input type="radio" id="kiwi" class="category" name="category" value="20" />
+            </div>
+            <div class="per-page">
+              <label for="">Number per page</label>
+              <select class="per-page-selection">
+                <option value="3">Three</option>
+                <option value="6">Six</option>
+                <option value="9">Nine</option>
+                <option value="12">Twelve</option>
+                <option value="15">Fifteen</option>
+                <option value="18">Eighteen</option>
+              </select>
+            </div>
+          </div>
+        <div class="wordpresslistofblogposts"></div>
     </main>
-    <footer>
-        <h5>footer</h5>
+    <footer >
+        <a href="about.html" >Made by @prebeneide</a>
+        <a href="contact.html" >Contact</a>
+        <a href="listofblogposts.html" >facebook</a>
     </footer>
+    <script src="js/listofblogposts.js"></script>
 </body>
 </html>

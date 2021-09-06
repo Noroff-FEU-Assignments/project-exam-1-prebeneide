@@ -11,11 +11,14 @@
 </head>
 <body>
     <header>
-        <nav class="navelement">
-            <ul>
+        <nav>
+            <div class="name">
+                <h5>Allergic? </h5>
+            </div>
+            <ul class="navlist">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="listofblogposts.html" >List of blogposts</a></li>
-                <li><a href="blogpostspecificpages.html" >Blog post specific pages</a></li>
+                <li><a href="listofblogposts.html" >Blogposts</a></li>
+                <li><a href="blogpostspecificpages.html" >Specific</a></li>
                 <li><a href="about.html" >About</a></li>
                 <li><a href="contact.html" >Contact</a></li>
             </ul>
@@ -23,10 +26,18 @@
     </header>
     <main>
         <h1>Home</h1>
+        <div class="wordpress"></div>
+        <div class="firstpreviousbutton" onclick="firstPreviousButton(baseUrl)"> << Previous</div>
+        <div class="secondpreviousbutton" onclick="secondPreviousButton(baseUrl)"> << Previous</div>
+        <div class="nextbutton" onclick="getNextPosts(baseUrl)">Next >> </div>
+        <div class="morebutton" onclick="getMorePosts(baseUrl)">Next >> </div>
     </main>
-    <footer>
-        <h5>footer</h5>
+    <footer >
+        <a href="about.html" >Made by @prebeneide</a>
+        <a href="contact.html" >Contact</a>
+        <a href="listofblogposts.html" >facebook</a>
     </footer>
+    <script src="js/getblogs.js"></script>
 </body>
 </html>
 
