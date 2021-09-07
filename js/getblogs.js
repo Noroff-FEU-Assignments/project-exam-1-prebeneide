@@ -11,7 +11,6 @@ async function getFirstPosts(url) {
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
         <div class="wordpresspostsdiv">
         <p class="wordpressposttitle">${post[i].title.rendered}</p>
-        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
         </div>
         </a>`
     }
@@ -30,7 +29,6 @@ async function getNextPosts(url) {
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
         <div class="wordpresspostsdiv">
         <p class="wordpressposttitle">${post[i].title.rendered}</p>
-        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
         </div>
         </a>`
     }
@@ -45,7 +43,6 @@ async function getMorePosts(url) {
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
         <div class="wordpresspostsdiv">
         <p class="wordpressposttitle">${post[i].title.rendered}</p>
-        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
         </div>
         </a>`
     }
@@ -62,7 +59,6 @@ async function firstPreviousButton(url) {
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
         <div class="wordpresspostsdiv">
         <p class="wordpressposttitle">${post[i].title.rendered}</p>
-        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
         </div>
         </a>`
     }
@@ -77,7 +73,6 @@ async function secondPreviousButton(url) {
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
         <div class="wordpresspostsdiv">
         <p class="wordpressposttitle">${post[i].title.rendered}</p>
-        <div class="wordpresstext">${post[i].excerpt.rendered}</div>
         </div>
         </a>`
     }

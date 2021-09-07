@@ -3,6 +3,7 @@ const listOfPostsContainer = document.querySelector(".wordpresslistofblogposts")
 const perPage = document.querySelector(".per-page-selection");
 const categories = document.querySelectorAll(".categories");
 const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + baseUrl;
+const searchButton = document.querySelector(".search-button");
 
 async function getListOfPosts(url){
     const response = await fetch(url);
@@ -37,4 +38,11 @@ categories.forEach(function(category){
         getListOfPosts(newUrl);
     }
 })
+
+searchButton.onclick = function() {
+    const searchInput = document.querySelector("#search-input").value;
+    const newUrl = corsEnabledUrl + `?search=${searchInput}`;
+    listOfPostsContainer.innerHTML = "";
+    getListOfPosts(newUrl);
+}
 
