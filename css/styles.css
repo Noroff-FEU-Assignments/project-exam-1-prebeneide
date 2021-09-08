@@ -52,6 +52,15 @@ nav {
   width: 400px;
 }
 
+/* Blogpostspecificpage */
+.wordpress-specific-text img {
+  width: initial;
+  height: initial;
+  width: 300px;
+}
+
+/* Blogpostspecificpage-end */
+
 .firstpreviousbutton {
   display: none;
 }
