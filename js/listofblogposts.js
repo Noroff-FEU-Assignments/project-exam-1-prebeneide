@@ -10,16 +10,16 @@ async function getListOfPosts(url){
     const posts = await response.json();
     posts.forEach(function(post){
         listOfPostsContainer.innerHTML +=
-        `<a href="blogpostspecificpages.html?id=${post.id}"
-        <div class="wordpresspostsdiv">
+        `<div class="wordpresspostsdiv"><a href="blogpostspecificpages.html?id=${post.id}"
         <p class="wordpressposttitle">${post.title.rendered}</p>
-        <div class="wordpresstext">${post.excerpt.rendered}</div>
-        </div>
-        </a>`
+        <p class="wordpresstext">${post.excerpt.rendered}</p>
+        </a></div>`
     })
 }
 
 getListOfPosts(corsEnabledUrl);
+
+
 
 perPage.onchange = function(event){
     const newUrl = corsEnabledUrl + `?per_page=${event.target.value}`;
@@ -45,4 +45,5 @@ searchButton.onclick = function() {
     listOfPostsContainer.innerHTML = "";
     getListOfPosts(newUrl);
 }
+
 

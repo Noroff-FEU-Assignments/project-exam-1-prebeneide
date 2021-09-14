@@ -27,6 +27,9 @@ async function fetchSpecificBlogPost() {
         createHtml(details);
 
         createTitle(details);
+
+
+
     } catch(error) {
         console.log(error);
         specificBlogContainer.innerHTML = error;
@@ -40,10 +43,8 @@ function createHtml(details) {
     console.log(details);
 
     specificBlogContainer.innerHTML +=  `
-                                         <div class="wordpress-specific-post-div">
-                                         <h1 class="wordpress-specific-post-title">${details.title.rendered}</h1>
-                                         <div class="wordpress-specific-text">${details.content.rendered}</div>
-                                         </div>
+                                         <h2 class="wordpress-specific-post-title">${details.title.rendered}</h2>
+                                         <div class="wordpress-specific-content">${details.content.rendered}</div>
                                          `;
 }
 
@@ -52,6 +53,10 @@ function createTitle(details) {
 
     titleName.innerHTML += `${details.title.rendered}`;
 }
+
+
+
+
 
 
 

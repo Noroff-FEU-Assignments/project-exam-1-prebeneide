@@ -9,8 +9,8 @@ async function getFirstPosts(url) {
     for (let i = 0; i <= 3; i++) {
         wordpressContainer.innerHTML +=
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
-        <div class="wordpresspostsdiv">
-        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpress-latest-post-div">
+        <p class="wordpress-latest-post-title">${post[i].title.rendered}</p>
         </div>
         </a>`
     }
@@ -27,8 +27,8 @@ async function getNextPosts(url) {
     for (let i = 4; i <= 7; i++) {
         wordpressContainer.innerHTML +=
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
-        <div class="wordpresspostsdiv">
-        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpress-latest-post-div">
+        <p class="wordpress-latest-post-title">${post[i].title.rendered}</p>
         </div>
         </a>`
     }
@@ -41,8 +41,8 @@ async function getMorePosts(url) {
     for (let i = 8; i <= 11; i++) {
         wordpressContainer.innerHTML +=
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
-        <div class="wordpresspostsdiv">
-        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpress-latest-post-div">
+        <p class="wordpress-latest-post-title">${post[i].title.rendered}</p>
         </div>
         </a>`
     }
@@ -57,8 +57,8 @@ async function firstPreviousButton(url) {
     for (let i = 0 ; i <= 3; i++) {
         wordpressContainer.innerHTML +=
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
-        <div class="wordpresspostsdiv">
-        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpress-latest-post-div">
+        <p class="wordpress-latest-post-title">${post[i].title.rendered}</p>
         </div>
         </a>`
     }
@@ -71,8 +71,8 @@ async function secondPreviousButton(url) {
     for (let i = 4 ; i <= 7; i++) {
         wordpressContainer.innerHTML +=
         `<a href="blogpostspecificpages.html?id=${post[i].id}"
-        <div class="wordpresspostsdiv">
-        <p class="wordpressposttitle">${post[i].title.rendered}</p>
+        <div class="wordpress-latest-post-div">
+        <p class="wordpress-latest-post-title">${post[i].title.rendered}</p>
         </div>
         </a>`
     }

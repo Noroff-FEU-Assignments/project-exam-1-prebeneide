@@ -2,6 +2,7 @@ body {
   background-color: #181818;
   color: #6930c3;
   margin: 0;
+  margin-bottom: 6vh;
   padding: 0;
   font-family: "Kaisei Tokumin", serif;
   font-family: "Spartan", sans-serif;
@@ -31,6 +32,10 @@ nav {
   color: rgb(17, 184, 226);
 }
 
+.active {
+  text-shadow: 1px 2px 2px rgb(17, 184, 226);
+}
+
 .name {
   color: #6930c3;
   font-size: 16px;
@@ -52,14 +57,112 @@ nav {
   width: 400px;
 }
 
+/* Indexpage */
+.indexgrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% 1fr 1fr;
+  grid-template-areas:
+    "heading heading heading"
+    ". . latestposts"
+    ". . latestposts";
+}
+
+.heading {
+  background-color: lightblue;
+  grid-area: heading;
+}
+.latestposts {
+  background-color: lightcoral;
+  grid-area: latestposts;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid lime;
+  justify-content: space-around;
+  width: 50%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+/* Indexpage-end */
+
+/* List of blogpostspage*/
+
+.listofblogpostsgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% 10% 65%;
+  grid-template-areas:
+    "heading heading heading"
+    "filter filter filter"
+    "blogposts blogposts blogposts";
+}
+
+.heading {
+  grid-area: heading;
+}
+
+.filter {
+  grid-area: filter;
+}
+
+.wordpresslistofblogposts {
+  grid-area: blogposts;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+}
+
+.wordpresspostsdiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: lightcoral;
+}
+
+.wordpresspostsdiv p {
+  max-width: 350px;
+}
+
+/* List of blogpostpage-end */
+
 /* Blogpostspecificpage */
-.wordpress-specific-text img {
+.specific-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% auto;
+  grid-template-areas:
+    "heading heading heading heading"
+    "blog blog blog blog";
+}
+
+.wordpress-specific-blog-div {
+  grid-area: blog;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid lightcoral;
+}
+
+.wordpress-specific-content img {
   width: initial;
   height: initial;
   width: 300px;
 }
 
 /* Blogpostspecificpage-end */
+
+/* About page */
+
+/* About page-end */
 
 .firstpreviousbutton {
   display: none;
@@ -96,6 +199,76 @@ footer a {
 footer a:hover {
   color: rgb(17, 184, 226);
 }
+
+/* Contact page */
+.form-error {
+  display: none;
+  color: rgb(238, 76, 70);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+#returnmessage {
+  padding: 1rem;
+  color: rgb(101, 241, 101);
+  margin-top: 1rem;
+}
+
+#contactForm {
+  margin: 5rem;
+}
+
+#contactForm div {
+}
+
+#contactForm label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contactForm input {
+  width: 70%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.form-error {
+  text-align: right;
+}
+
+#returnmessage {
+  text-align: right;
+}
+
+.send-message-button {
+  text-align: right;
+}
+
+#contactForm button {
+  padding: 1rem;
+  background-color: #6930c3;
+  color: #181818;
+  margin: 1rem;
+  border-style: none;
+}
+
+#contactForm button:disabled {
+  background: rgb(88, 87, 87);
+  color: grey;
+}
+
+.your-message-class textarea {
+  height: 120px;
+  width: 70%;
+  font-family: "Spartan";
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+/* Contact page-end */
 
 @media screen and (max-width: 1024px) {
   .navlist {
