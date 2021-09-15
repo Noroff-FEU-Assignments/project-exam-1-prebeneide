@@ -10,8 +10,9 @@ async function getListOfPosts(url){
     const posts = await response.json();
     posts.forEach(function(post){
         listOfPostsContainer.innerHTML +=
-        `<div class="wordpresspostsdiv"><a href="blogpostspecificpages.html?id=${post.id}"
-        <p class="wordpressposttitle">${post.title.rendered}</p>
+        `<div class="wordpresspostsdiv">
+        <a href="blogpostspecificpages.html?id=${post.id}">
+        <h2 class="wordpressposttitle">${post.title.rendered}</h2>
         <p class="wordpresstext">${post.excerpt.rendered}</p>
         </a></div>`
     })
@@ -46,4 +47,12 @@ searchButton.onclick = function() {
     getListOfPosts(newUrl);
 }
 
+var modal = document.getElementById("myModal");
+
+var img = document.getElementsByClassName("wp-block-image size-large");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
 

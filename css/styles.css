@@ -1,5 +1,5 @@
 body {
-  background-color: #181818;
+  background-color: #0a0a0a;
   color: #6930c3;
   margin: 0;
   margin-bottom: 6vh;
@@ -13,7 +13,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
-  background-color: #181818;
+  background-color: #000000;
 }
 
 .navlist li {
@@ -21,7 +21,7 @@ nav {
 }
 
 .navlist a {
-  color: #6930c3;
+  color: #e412d9;
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 13px;
@@ -37,7 +37,7 @@ nav {
 }
 
 .name {
-  color: #6930c3;
+  color: #e412d9;
   font-size: 16px;
 }
 
@@ -57,24 +57,36 @@ nav {
   width: 400px;
 }
 
+.orientation {
+  background-color: #de7bf1;
+}
+
+.orientation a {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: rgb(35, 37, 37);
+}
+.orientation p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: rgb(35, 37, 37);
+}
+
 /* Indexpage */
 .indexgrid {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 25% 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "heading heading heading"
     ". . latestposts"
     ". . latestposts";
 }
 
-.heading {
-  background-color: lightblue;
-  grid-area: heading;
-}
 .latestposts {
-  background-color: lightcoral;
+  background-color: #77d9eb;
   grid-area: latestposts;
   display: flex;
   flex-direction: column;
@@ -96,16 +108,11 @@ nav {
 
 .listofblogpostsgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 25% 10% 65%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    "heading heading heading"
     "filter filter filter"
     "blogposts blogposts blogposts";
-}
-
-.heading {
-  grid-area: heading;
 }
 
 .filter {
@@ -125,7 +132,12 @@ nav {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: lightcoral;
+  background-color: #202022;
+}
+
+.wordpresspostsdiv a {
+  text-decoration: none;
+  color: #8d9ca0;
 }
 
 .wordpresspostsdiv p {
@@ -137,11 +149,10 @@ nav {
 /* Blogpostspecificpage */
 .specific-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% auto;
-  grid-template-areas:
-    "heading heading heading heading"
-    "blog blog blog blog";
+  background-color: #202022;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "blog blog blog";
 }
 
 .wordpress-specific-blog-div {
@@ -149,7 +160,7 @@ nav {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  border: 1px solid lightcoral;
+  color: #8d9ca0;
 }
 
 .wordpress-specific-content img {
@@ -177,7 +188,7 @@ nav {
 }
 
 footer {
-  background: #181818;
+  background: #000000;
   position: fixed;
   bottom: 0;
   min-height: 6vh;

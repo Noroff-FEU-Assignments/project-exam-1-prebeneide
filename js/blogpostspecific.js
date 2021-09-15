@@ -50,9 +50,12 @@ function createHtml(details) {
 
 function createTitle(details) {
     const titleName = document.querySelector(".specificblogtitle");
+    const orientationName = document.querySelector(".specificblogorientation");
 
     titleName.innerHTML += `${details.title.rendered}`;
+    orientationName.innerHTML += `${details.title.rendered}`;
 }
+
 
 
 
