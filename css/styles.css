@@ -1,6 +1,6 @@
 body {
   background-color: #0a0a0a;
-  color: #6930c3;
+  color: #6a676d;
   margin: 0;
   margin-bottom: 6vh;
   padding: 0;
@@ -57,21 +57,25 @@ nav {
   width: 400px;
 }
 
+.modalimage {
+  width: 700px;
+}
+
 .orientation {
-  background-color: #de7bf1;
+  background-color: #413f44;
 }
 
 .orientation a {
   margin-top: 0;
   margin-bottom: 0;
   text-decoration: none;
-  color: rgb(35, 37, 37);
+  color: #949099;
 }
 .orientation p {
   margin-top: 0;
   margin-bottom: 0;
   text-decoration: none;
-  color: rgb(35, 37, 37);
+  color: #949099;
 }
 
 /* Indexpage */
@@ -79,23 +83,90 @@ nav {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 25% auto auto auto auto auto auto;
   grid-template-areas:
-    ". . latestposts"
-    ". . latestposts";
+    "heading heading heading"
+    "box1 box2 latestposts"
+    "box3 box4 box5"
+    "box6 box7 box8"
+    "box9 box10 box11"
+    "box12 box13 box14"
+    "box15 . . ";
+}
+
+.heading {
+  grid-area: heading;
+  color: rgb(74, 76, 77);
+  font-size: 35px;
+  text-align: center;
+}
+
+.indexgrid p {
+  margin: 40px;
+}
+
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;
+}
+.box9 {
+  grid-area: box9;
+}
+.box10 {
+  grid-area: box10;
+}
+.box11 {
+  grid-area: box11;
+}
+.box12 {
+  grid-area: box12;
+}
+.box13 {
+  grid-area: box13;
+}
+.box14 {
+  grid-area: box14;
+}
+.box15 {
+  grid-area: box15;
 }
 
 .latestposts {
-  background-color: #77d9eb;
+  background-color: #0a0a0a;
   grid-area: latestposts;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(17, 184, 226);
 }
+
+.wordpress p {
+  color: rgb(17, 184, 226);
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
-  border: 2px solid lime;
   justify-content: space-around;
   width: 50%;
   padding-top: 5px;
@@ -144,22 +215,65 @@ nav {
   max-width: 350px;
 }
 
+.search {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.search-button {
+  background-color: #e412d9;
+  color: #d8cece;
+  border-style: none;
+  padding: 7px 12px 7px 12px;
+}
+
+#search-input {
+  background-color: rgb(74, 77, 80);
+  border-style: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 350px;
+}
+
+.per-page-selection {
+  background-color: rgb(74, 77, 80);
+  border-style: none;
+  padding: 5px;
+}
+
+.categories {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.per-page {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
 /* List of blogpostpage-end */
 
 /* Blogpostspecificpage */
-.specific-grid {
+.wordpress-specific-blog-div {
   display: grid;
   background-color: #202022;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "blog blog blog";
+  grid-template-rows: 25% auto;
+  grid-template-areas:
+    "title title title"
+    "blog blog blog";
 }
 
-.wordpress-specific-blog-div {
-  grid-area: blog;
+.wordpress-specific-post-title {
+  grid-area: title;
   text-align: center;
-  max-width: 600px;
+  font-size: 50px;
+}
+
+.wordpress-specific-content {
+  text-align: center;
   margin: 0 auto;
+  grid-area: blog;
+  max-width: 600px;
   color: #8d9ca0;
 }
 
@@ -167,6 +281,28 @@ nav {
   width: initial;
   height: initial;
   width: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.wordpress-specific-content p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.image-modal {
+  display: none;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  text-align: center;
+  padding-top: 13vh;
+}
+
+.modal-image-class {
+  max-width: 400px;
 }
 
 /* Blogpostspecificpage-end */
@@ -242,8 +378,10 @@ footer a:hover {
 
 #contactForm input {
   width: 70%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #6a676d;
+  border-style: none;
 }
 
 .form-error {
@@ -277,6 +415,8 @@ footer a:hover {
   font-family: "Spartan";
   font-size: 12px;
   font-weight: bolder;
+  background-color: #6a676d;
+  border-style: none;
 }
 
 /* Contact page-end */
@@ -291,6 +431,11 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  /*Specific blog page*/
+  .modal-image-class {
+    width: 100%;
+  }
+  /*Specific blog page-end*/
   footer {
     flex-direction: column-reverse;
   }

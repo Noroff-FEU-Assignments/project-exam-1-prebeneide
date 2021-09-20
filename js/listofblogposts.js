@@ -47,12 +47,5 @@ searchButton.onclick = function() {
     getListOfPosts(newUrl);
 }
 
-var modal = document.getElementById("myModal");
 
-var img = document.getElementsByClassName("wp-block-image size-large");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  }
 

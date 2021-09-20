@@ -24,10 +24,14 @@ async function fetchSpecificBlogPost() {
 
         specificBlogContainer.innerHTML = "";
 
+
         createHtml(details);
 
         createTitle(details);
 
+        getModal(details);
+        console.log(getModal);
+        console.log(getModal(details));
 
 
     } catch(error) {
@@ -43,9 +47,12 @@ function createHtml(details) {
     console.log(details);
 
     specificBlogContainer.innerHTML +=  `
-                                         <h2 class="wordpress-specific-post-title">${details.title.rendered}</h2>
-                                         <div class="wordpress-specific-content">${details.content.rendered}</div>
-                                         `;
+                                        <h1 class="wordpress-specific-post-title">${details.title.rendered}</h1>
+                                        <div class="wordpress-specific-content">${details.content.rendered}</div>
+                                        <div id="larger-image-modal" class="image-modal">
+                                        <img class="modal-image-class" id="chosen-image">
+                                        </div>
+                                        `;
 }
 
 function createTitle(details) {
@@ -58,10 +65,24 @@ function createTitle(details) {
 
 
 
+function getModal() {
+const largerImageModal = document.getElementById("larger-image-modal");
+const allImages = document.querySelectorAll("figure img");
+const modalImage = document.getElementById("chosen-image");
 
+allImages.forEach(function(details){
+    details.onclick = function(){
+    largerImageModal.style.display = "block";
+    modalImage.src = details.src;
+        }
+    })
 
+const closeModal = document.querySelector(".image-modal");
 
-
+closeModal.onclick = function() { 
+  largerImageModal.style.display = "none";
+    }
+}
 
 
 
