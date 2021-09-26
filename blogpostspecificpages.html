@@ -2,29 +2,20 @@
 <html>
 <head>
     <title class="specificblogtitle">Blog | </title>
-    <meta name="description" content="Blog post specific pages" />
+    <meta name="description" content="Blog post specific page" />
     <meta name="viewport" content="width=device-width, initial scale=1" />
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&family=Spartan:wght@300&display=swap');
-    </style> 
-    <!-- Hotjar Tracking Code for https://eloquent-noether-b520c3.netlify.app -->
-    <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2601902,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="name">
-                <h5>Allergic? </h5>
+                <a href="index.html"><p> blog. </p></a>
             </div>
             <ul class="navlist">
                 <li><a href="index.html" >Home</a></li>
@@ -32,12 +23,17 @@
                 <li><a href="about.html" >About</a></li>
                 <li><a href="contact.html" >Contact</a></li>
             </ul>
+            <div class="menuicon">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
         </nav>
+        <div class="orientation">
+            <p><a href="index.html">Home</a> &#187; <a href="listofblogposts.html">Blogposts</a> &#187; <a class="specificblogorientation"> </a> </p>
+        </div>
     </header>
     <main>
-        <div class="orientation">
-            <p><a href="index.html">Home</a> > <a href="listofblogposts.html">Blogposts</a> > <a class="specificblogorientation"> </a> </p>
-        </div>
         <div class="specific-grid">
             <div class="wordpress-specific-blog-div"></div>
         </div>
@@ -47,6 +43,7 @@
         <a href="contact.html" >Contact</a>
         <a href="listofblogposts.html" >facebook</a>
     </footer>
+    <script src="js/showhidenavbar.js"></script>
     <script src="js/blogpostspecific.js"></script>
 </body>
 </html>

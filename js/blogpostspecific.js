@@ -20,19 +20,13 @@ async function fetchSpecificBlogPost() {
         const response = await fetch(url);
         const details = await response.json();
 
-        console.log(details);
-
         specificBlogContainer.innerHTML = "";
-
 
         createHtml(details);
 
         createTitle(details);
 
         getModal(details);
-        console.log(getModal);
-        console.log(getModal(details));
-
 
     } catch(error) {
         console.log(error);
@@ -43,8 +37,6 @@ async function fetchSpecificBlogPost() {
 fetchSpecificBlogPost();
 
 function createHtml(details) {
-    
-    console.log(details);
 
     specificBlogContainer.innerHTML +=  `
                                         <h1 class="wordpress-specific-post-title">${details.title.rendered}</h1>
@@ -60,6 +52,7 @@ function createTitle(details) {
     const orientationName = document.querySelector(".specificblogorientation");
 
     titleName.innerHTML += `${details.title.rendered}`;
+
     orientationName.innerHTML += `${details.title.rendered}`;
 }
 

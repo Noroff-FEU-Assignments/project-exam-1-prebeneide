@@ -1,6 +1,6 @@
 const baseUrl = "http://project-exam-1-prebeneide.preben.one/wp-json/wp/v2/posts";
 const wordpressContainer = document.querySelector(".wordpress");
-const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + baseUrl;
+const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + baseUrl + "?per_page=20";
 
 
 async function getFirstPosts(url) {
@@ -78,32 +78,33 @@ async function secondPreviousButton(url) {
     }
 }
 
-document.querySelector(".nextbutton").addEventListener("click", function(){
-    document.querySelector(".morebutton").style.display = "block";
-    document.querySelector(".nextbutton").style.display = "none";
-    document.querySelector(".firstpreviousbutton").style.display = "block";
+
+document.querySelector("#nextbutton").addEventListener("click", function(){
+    document.querySelector("#morebutton").style.display = "block";
+    document.querySelector("#nextbutton").style.display = "none";
+    document.querySelector("#firstpreviousbutton").style.display = "block";
 
 })
 
-document.querySelector(".firstpreviousbutton").addEventListener("click", function(){
-    document.querySelector(".morebutton").style.display = "none";
-    document.querySelector(".nextbutton").style.display = "block";
-    document.querySelector(".firstpreviousbutton").style.display = "none";
+document.querySelector("#firstpreviousbutton").addEventListener("click", function(){
+    document.querySelector("#morebutton").style.display = "none";
+    document.querySelector("#nextbutton").style.display = "block";
+    document.querySelector("#firstpreviousbutton").style.display = "none";
 
 })
 
-document.querySelector(".morebutton").addEventListener("click", function(){
-    document.querySelector(".morebutton").style.display = "none";
-    document.querySelector(".firstpreviousbutton").style.display = "none";
-    document.querySelector(".secondpreviousbutton").style.display = "block";
+document.querySelector("#morebutton").addEventListener("click", function(){
+    document.querySelector("#morebutton").style.display = "none";
+    document.querySelector("#firstpreviousbutton").style.display = "none";
+    document.querySelector("#secondpreviousbutton").style.display = "block";
 
 
 })
 
-document.querySelector(".secondpreviousbutton").addEventListener("click", function(){
-    document.querySelector(".morebutton").style.display = "block";
-    document.querySelector(".firstpreviousbutton").style.display = "block";
-    document.querySelector(".secondpreviousbutton").style.display = "none";
+document.querySelector("#secondpreviousbutton").addEventListener("click", function(){
+    document.querySelector("#morebutton").style.display = "block";
+    document.querySelector("#firstpreviousbutton").style.display = "block";
+    document.querySelector("#secondpreviousbutton").style.display = "none";
 
 
 })

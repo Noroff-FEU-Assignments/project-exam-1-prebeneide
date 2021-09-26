@@ -27,6 +27,8 @@ function submitForm(event) {
     event.preventDefault();    
 
     message.innerHTML = '<div class="message">Your message has been sent</div>';
+
+    button.disabled = true;
    
     form.reset();
 }
