@@ -727,6 +727,8 @@ footer a:hover {
   .index-class p {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   #indexdiv3 {
@@ -773,9 +775,20 @@ footer a:hover {
   .modal-image-class {
     width: 100%;
   }
+
+  .wordpress-specific-content p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   /*Specific blog page-end*/
 
   /* Contact page */
+
+  .contact-me-div {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
   #contactForm label {
     display: flex;
     flex-direction: column;
