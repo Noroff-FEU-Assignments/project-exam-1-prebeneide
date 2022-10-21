@@ -15,7 +15,7 @@ The home page should have a ‘Latest Posts’ section which uses a carousel (sl
 
 ### Blog Page
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+The blog posts page should show the first 10 blogs, and the user could click to view more results which then show underneath the first 10 blogs.
 
 ### Blog Specific Page
 
@@ -25,17 +25,17 @@ If images on the blog post page are clicked, a modal should appear giving the us
 
 ### Contact page
 
-I should create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
+I needed to create a contact us page, there should be 4 textboxes on this page.
+-	Name (Must be more than 5 characters long)
 -	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+-	Subject (Must be more than 15 characters long)
+-	Message content (Must be more than 25 characters long)
 
-I should use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+I needed to use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
 
 ### WordPress
 
-The content for my website should be stored on a WordPress installation used as a Headless CMS. It was important to note that we are only using WordPress to provide an API and add content for the blog. I should not submit a link to a WordPress site, but build my website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+The content for my website should be stored on a WordPress installation used as a Headless CMS. It was important to note that we are only using WordPress to provide an API and add content for the blog. I wasn't supposed to submit a link to a WordPress site, but build my website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
 
 The project had two aspects:
 -	API from your WordPress installation
@@ -45,7 +45,7 @@ I needed to add at least 12 blogs for my website. I could use lorem ipsum for pa
 
 ## Level 1 Process
 
-1.	I should decide on the theme for the blog I was going to make
+1.	I needed to decide on the theme for the blog I was going to make
 2.	Create a prototype of the website
 3.	Install WordPress on my web host and add the blogs on the admin panel. 
 4.	Use the GitHub repo created by GitHub Classroom for my files and deploy to Netlify
